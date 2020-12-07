@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Instagram Feed with Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fab fa-instagram mr-2"></i>
+                <!-- <i>Instagram</i> -->
+                <img class="logo-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Gmo3llt-JGGFoxD7wDfjDAMTXZy3YmIzGw&usqp=CAU"></img>
+            </a>
+            <button class="btn btn-success my-2 my-sm-0 ml-auto" data-toggle="modal" data-target="#createPostModal" type="button">Create a new post</button>
+            <ul class="navbar-nav ml-2">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Saved</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Log Out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row justify-content-center my-3">
+        <ul class="nav nav-pills mb-3 my-auto" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="group-view-tab" data-toggle="pill" href="#group-view" role="tab" aria-controls="group-view" aria-selected="true">
+                    <i class="fas fa-th"></i>
+                </a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="item-view-tab" data-toggle="pill" href="#item-view" role="tab" aria-controls="item-view" aria-selected="false">
+                    <i class="fas fa-square"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="group-view" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="card-group">
+                <div class="card">
+                    <img src="https://dkt6rvnu67rqj.cloudfront.net/cdn/ff/ngPTIrcYmKt36v1ShXB6M_vxQAvwX-8u6OVMm86kaVE/1579535380/public/styles/600x400/public/media/int_files/1024897.jpg?h=8e509259&itok=Gz9hDRFw" class="card-img-top my-auto" alt="rhino">
+                </div>
+                <div class="card">
+                    <img src="https://vignette.wikia.nocookie.net/reinoanimalia/images/8/80/Jaguar_hd_full.png/revision/latest?cb=20130303143941&path-prefix=es" class="card-img-top my-auto" alt="jaguar">
+                </div>
+                <div class="card">
+                    <img src="https://static3.depositphotos.com/1001776/142/i/950/depositphotos_1427011-stock-photo-elefant-29.jpg" class="card-img-top my-auto" alt="elefant">
+                </div>
+            </div>
+            <div class="card-group">
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2019/04/29/00/53/wild-animals-4164868_960_720.jpg" class="card-img-top my-auto" alt="lion">
+                </div>
+                <div class="card">
+                    <img src="https://www.popphoto.com/resizer/oyGAAq8CmeV4Wik7LalUIStT9hs=/760x486/filters:focal(480x307:481x308)/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/6WDLUBZMWB2NNKHCCCYBCRVUSU.jpg" class="card-img-top my-auto" alt="panther">
+                </div>
+                <div class="card">
+                    <img src="https://news.cgtn.com/news/78637a4e316b544f3455544d30456a4e35677a4e31457a6333566d54/img/d96bd8405a214bdc984449cd230deec2/d96bd8405a214bdc984449cd230deec2.jpg" class="card-img-top my-auto" alt="panda">
+                </div>
+            </div>
+            <div class="card-group">
+                <div class="card">
+                    <img src="https://d2g6byanrj0o4m.cloudfront.net/images/1201/shutterstock_547835170.jpg" class="card-img-top my-auto" alt="gorilla">
+                </div>
+                <div class="card">
+                    <img src="https://i.pinimg.com/originals/89/14/ee/8914ee639da8c9c1ffea133609a6fe7d.jpg" class="card-img-top my-auto" alt="hipo">
+                </div>
+                <div class="card">
+                    <img src="https://images.newscientist.com/wp-content/uploads/2018/07/17140416/01598846.jpg" class="card-img-top my-auto" alt="cocrodile">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="item-view" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="container-fluid p-0 pt-3 bg-light d-flex flex-column align-items-center">
+                <div class="card col-md-6 p-0 mb-4">
+                    <div class="card-header d-flex flex-row justify-content-between align-items-middle p-3 bg-white">
+                        <div class="d-flex flex-row align-items-left">
+                            <img class="circle-image" src="https://m.media-amazon.com/images/I/71uDZleXkUL._AC_SS350_.jpg"></img>
+                            <p class="card-title my-0 ml-2">  InstagramUser</p> 
+                        </div>
+                        <p class="my-0">05/20</p>
+                    </div>
+                    <img src="https://dkt6rvnu67rqj.cloudfront.net/cdn/ff/ngPTIrcYmKt36v1ShXB6M_vxQAvwX-8u6OVMm86kaVE/1579535380/public/styles/600x400/public/media/int_files/1024897.jpg?h=8e509259&itok=Gz9hDRFw" class="card-img-top my-auto" alt="rhino" />
+                    <div class="card-body">
+                        <p class="card-text"><strong>23 Likes</strong></p>
+                        <p class="card-text">Here is a beautiful rhinoceros in the wild. Rhino's are very big and resilient creatures; they are also kind of cute when not running after you.</p>
+                    </div>
+                    <div class="card-footer d-flex flex-row justify-content-between">
+                        <div class="d-inline-flex">
+                            <i class="far fa-heart my-auto"></i>
+                            <p class="card-text ml-2"><small class="text-muted">Comments</small></p>
+                        </div>
+                        <i class="fas fa-ellipsis-v my-auto"></i>
+                    </div>
+                </div>
+                <div class="card col-md-6 p-0 mb-4">
+                    <div class="card-header d-flex flex-row justify-content-between align-items-middle p-3 bg-white">
+                        <div class="d-flex flex-row align-items-left">
+                            <img class="circle-image" src="https://m.media-amazon.com/images/I/71uDZleXkUL._AC_SS350_.jpg"></img>
+                            <p class="card-title my-0 ml-2">  InstagramUser</p> 
+                        </div>
+                        <p class="my-0">04/20</p>
+                    </div>
+                    <img src="https://vignette.wikia.nocookie.net/reinoanimalia/images/8/80/Jaguar_hd_full.png/revision/latest?cb=20130303143941&path-prefix=es" class="card-img-top my-auto" alt="jaguar">
+                    <div class="card-body">
+                        <p class="card-text"><strong>12 Likes</strong></p>
+                        <p class="card-text">Jaguars are the largest feline in the modern world. They are native to the Americas. At the top of their food chain, jaguars are well-known for their predatory strengths of stalking and ambushing their prey.</p>
+                    </div>
+                    <div class="card-footer d-flex flex-row justify-content-between">
+                        <div class="d-inline-flex">
+                            <i class="far fa-heart my-auto"></i>
+                            <p class="card-text ml-2"><small class="text-muted">Comments</small></p>
+                        </div>
+                        <i class="fas fa-ellipsis-v my-auto"></i>
+                    </div>
+                </div>
+                <div class="card col-md-6 p-0 mb-4">
+                    <div class="card-header d-flex flex-row justify-content-between align-items-middle p-3 bg-white">
+                        <div class="d-flex flex-row align-items-left">
+                            <img class="circle-image" src="https://m.media-amazon.com/images/I/71uDZleXkUL._AC_SS350_.jpg"></img>
+                            <p class="card-title my-0 ml-2">  InstagramUser</p> 
+                        </div>
+                        <p class="my-0">03/20</p>
+                    </div>
+                    <img src="https://static3.depositphotos.com/1001776/142/i/950/depositphotos_1427011-stock-photo-elefant-29.jpg" class="card-img-top my-auto" alt="elephant">
+                    <div class="card-body">
+                        <p class="card-text"><strong>43 Likes</strong></p>
+                        <p class="card-text">Elephants, the gentle giants of massive mammals, live in big groups called "memories" as family life is very important to them. It is said that elephants have excellent memory recalls both throughout a lifespan and across generations.</p>
+                    </div>
+                    <div class="card-footer d-flex flex-row justify-content-between">
+                        <div class="d-inline-flex">
+                            <i class="far fa-heart my-auto"></i>
+                            <p class="card-text ml-2"><small class="text-muted">Comments</small></p>
+                        </div>
+                        <i class="fas fa-ellipsis-v my-auto"></i>
+                    </div>
+                </div>
+                <div class="card col-md-6 p-0 mb-4">
+                    <div class="card-header d-flex flex-row justify-content-between align-items-middle p-3 bg-white">
+                        <div class="d-flex flex-row align-items-left">
+                            <img class="circle-image" src="https://m.media-amazon.com/images/I/71uDZleXkUL._AC_SS350_.jpg"></img>
+                            <p class="card-title my-0 ml-2">  InstagramUser</p> 
+                        </div>
+                        <p class="my-0">02/20</p>
+                    </div>
+                    <img src="https://cdn.pixabay.com/photo/2019/04/29/00/53/wild-animals-4164868_960_720.jpg" class="card-img-top my-auto" alt="lion">
+                    <div class="card-body">
+                        <p class="card-text"><strong>11 Likes</strong></p>
+                        <p class="card-text">Like elephants, lions are also most comfortable living in groups. A group of lions is called a pride and consists of a few adult males, related females, and cubs. The astological sign Leo's symbol is a lion, and some Leos are known to be quite prideful indeed.</p>
+                    </div>
+                    <div class="card-footer d-flex flex-row justify-content-between">
+                        <div class="d-inline-flex">
+                            <i class="far fa-heart my-auto"></i>
+                            <p class="card-text ml-2"><small class="text-muted">Comments</small></p>
+                        </div>
+                        <i class="fas fa-ellipsis-v my-auto"></i>
+                    </div>
+                </div>
+                <div class="card col-md-6 p-0 mb-4">
+                    <div class="card-header d-flex flex-row justify-content-between align-items-middle p-3 bg-white">
+                        <div class="d-flex flex-row align-items-left">
+                            <img class="circle-image" src="https://m.media-amazon.com/images/I/71uDZleXkUL._AC_SS350_.jpg"></img>
+                            <p class="card-title my-0 ml-2">  InstagramUser</p> 
+                        </div>
+                        <p class="my-0">01/20</p>
+                    </div>
+                    <img src="https://www.popphoto.com/resizer/oyGAAq8CmeV4Wik7LalUIStT9hs=/760x486/filters:focal(480x307:481x308)/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/6WDLUBZMWB2NNKHCCCYBCRVUSU.jpg" class="card-img-top my-auto" alt="panther">
+                    <div class="card-body">
+                        <p class="card-text"><strong>14 Likes</strong></p>
+                        <p class="card-text">The Black Panther is found all over the world on the continents of North America, Africa, and Asia. Although they have an excess of black pigment, which gives them their sleek black coat, the typical spotted markings found on other big cats such as the leopard and jaguar can also be seen on Black Panthers.</p>
+                    </div>
+                    <div class="card-footer d-flex flex-row justify-content-between">
+                        <div class="d-inline-flex">
+                            <i class="far fa-heart my-auto"></i>
+                            <p class="card-text ml-2"><small class="text-muted">Comments</small></p>
+                        </div>
+                        <i class="fas fa-ellipsis-v my-auto"></i>
+                    </div>
+                </div>
+                <div class="card col-md-6 p-0 mb-4">
+                    <div class="card-header d-flex flex-row justify-content-between align-items-middle p-3 bg-white">
+                        <div class="d-flex flex-row align-items-left">
+                            <img class="circle-image" src="https://m.media-amazon.com/images/I/71uDZleXkUL._AC_SS350_.jpg"></img>
+                            <p class="card-title my-0 ml-2">  InstagramUser</p> 
+                        </div>
+                        <p class="my-0">12/19</p>
+                    </div>
+                    <img src="https://news.cgtn.com/news/78637a4e316b544f3455544d30456a4e35677a4e31457a6333566d54/img/d96bd8405a214bdc984449cd230deec2/d96bd8405a214bdc984449cd230deec2.jpg" class="card-img-top my-auto" alt="panda">
+                    <div class="card-body">
+                        <p class="card-text"><strong>25 Likes</strong></p>
+                        <p class="card-text">Native to south-central China, Panda Bears have a cute and cuddly look that few are able to resist. Although the Panda is categorized as a carnivore, Bamboo shoots and leaves make up 99% of their diet.</p>
+                    </div>
+                    <div class="card-footer d-flex flex-row justify-content-between">
+                        <div class="d-inline-flex">
+                            <i class="far fa-heart my-auto"></i>
+                            <p class="card-text ml-2"><small class="text-muted">Comments</small></p>
+                        </div>
+                        <i class="fas fa-ellipsis-v my-auto"></i>
+                    </div>
+                </div>
+                <div class="card col-md-6 p-0 mb-4">
+                    <div class="card-header d-flex flex-row justify-content-between align-items-middle p-3 bg-white">
+                        <div class="d-flex flex-row align-items-left">
+                            <img class="circle-image" src="https://m.media-amazon.com/images/I/71uDZleXkUL._AC_SS350_.jpg"></img>
+                            <p class="card-title my-0 ml-2">  InstagramUser</p> 
+                        </div>
+                        <p class="my-0">11/19</p>
+                    </div>
+                    <img src="https://d2g6byanrj0o4m.cloudfront.net/images/1201/shutterstock_547835170.jpg" class="card-img-top my-auto" alt="gorilla">
+                    <div class="card-body">
+                        <p class="card-text"><strong>15 Likes</strong></p>
+                        <p class="card-text">Here is a beautiful Mountain Gorilla of Rwanda looking pensive surrounded by lush green foliage. Special safari trips throughout the region can give incredible glimpses into the lives these distant ancestors lead, but tread with care as only 1,000 currenty exist.</p>
+                    </div>
+                    <div class="card-footer d-flex flex-row justify-content-between">
+                        <div class="d-inline-flex">
+                            <i class="far fa-heart my-auto"></i>
+                            <p class="card-text ml-2"><small class="text-muted">Comments</small></p>
+                        </div>
+                        <i class="fas fa-ellipsis-v my-auto"></i>
+                    </div>
+                </div>
+                <div class="card col-md-6 p-0 mb-4">
+                    <div class="card-header d-flex flex-row justify-content-between align-items-middle p-3 bg-white">
+                        <div class="d-flex flex-row align-items-left">
+                            <img class="circle-image" src="https://m.media-amazon.com/images/I/71uDZleXkUL._AC_SS350_.jpg"></img>
+                            <p class="card-title my-0 ml-2">  InstagramUser</p> 
+                        </div>
+                        <p class="my-0">10/19</p>
+                    </div>
+                    <img src="https://i.pinimg.com/originals/89/14/ee/8914ee639da8c9c1ffea133609a6fe7d.jpg" class="card-img-top my-auto" alt="hipo">
+                    <div class="card-body">
+                        <p class="card-text"><strong>20 Likes</strong></p>
+                        <p class="card-text">The hippopotamus, or "hippo," is among the largest living land mammals - slightly smaller than elephants and rhinos. Although they appear most similar to pigs, hippos are most closely related to dolphins and porpoises. Unlike dolphins, however, hippos have been known to be very aggressive toward humans!</p>
+                    </div>
+                    <div class="card-footer d-flex flex-row justify-content-between">
+                        <div class="d-inline-flex">
+                            <i class="far fa-heart my-auto"></i>
+                            <p class="card-text ml-2"><small class="text-muted">Comments</small></p>
+                        </div>
+                        <i class="fas fa-ellipsis-v my-auto"></i>
+                    </div>
+                </div>
+                <div class="card col-md-6 p-0 mb-4">
+                    <div class="card-header d-flex flex-row justify-content-between align-items-middle p-3 bg-white">
+                        <div class="d-flex flex-row align-items-left">
+                            <img class="circle-image" src="https://m.media-amazon.com/images/I/71uDZleXkUL._AC_SS350_.jpg"></img>
+                            <p class="card-title my-0 ml-2">  InstagramUser</p> 
+                        </div>
+                        <p class="my-0">09/19</p>
+                    </div>
+                    <img src="https://images.newscientist.com/wp-content/uploads/2018/07/17140416/01598846.jpg" class="card-img-top my-auto" alt="cocrodile">
+                    <div class="card-body">
+                        <p class="card-text"><strong>16 Likes</strong></p>
+                        <p class="card-text">Cocrodiles are amazing reptiles. Mostly living in rivers, they can range in size from 5 to 23 feet. If you think they look like dinosaurs, you're right! They belong to a group of reptiles called Archosaurs, which includes dianosaurs from the Upper Triassic period.</p>
+                    </div>
+                    <div class="card-footer d-flex flex-row justify-content-between">
+                        <div class="d-inline-flex">
+                            <i class="far fa-heart my-auto"></i>
+                            <p class="card-text ml-2"><small class="text-muted">Comments</small></p>
+                        </div>
+                        <i class="fas fa-ellipsis-v my-auto"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="createPostModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                    <div class="icon-box">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

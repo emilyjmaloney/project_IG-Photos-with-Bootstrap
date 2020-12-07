@@ -1,0 +1,35 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* this allows icons in active nav-pills buttons to render gray and not blue */
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: #6C757D;
+}
+/* this allows icons in inactive nav-pills buttons to render gray and not blue */
+.nav-pills .nav-link {
+    color: #6C757D;
+}
+/* this overides bootstrap background color for .card-header */
+.card-header > p {
+    color: lightgray;
+}
+.icon-box {
+    display: inline-flex;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid #6C757D;
+    border-radius: 0.5rem;
+    align-items: center;
+}
+.circle-image {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.logo-image {
+    width: 77px;
+    height: 50px;
+}
